@@ -2,18 +2,24 @@ const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const card = document.getElementById("card");
 
-// Move NO button
-function moveNoButton() {
-  const x = Math.random() * 240 - 120;
-  const y = Math.random() * 240 - 120;
+let yesScale = 1;
+
+// When NO is hovered or touched
+function growYesButton() {
+  yesScale += 0.15;
+  yesBtn.style.transform = `scale(${yesScale})`;
+
+  // Optional: move NO slightly
+  const x = Math.random() * 120 - 60;
+  const y = Math.random() * 120 - 60;
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 }
 
-// Escape on hover (desktop)
-noBtn.addEventListener("mouseover", moveNoButton);
+// Desktop
+noBtn.addEventListener("mouseover", growYesButton);
 
-// Escape on touch (mobile)
-noBtn.addEventListener("touchstart", moveNoButton);
+// Mobile
+noBtn.addEventListener("touchstart", growYesButton);
 
 // YES button
 yesBtn.addEventListener("click", () => {
@@ -23,6 +29,7 @@ yesBtn.addEventListener("click", () => {
     <img src="Flowers.png" class="cute-img">
   `;
 });
+
 
 
 
