@@ -18,11 +18,11 @@ noBtn.addEventListener("click", (e) => {
 // YES button
 yesBtn.addEventListener("click", () => {
   card.innerHTML = `
-    <h1>YAY!!! 💖🥰</h1>
-    <p>I knew you’d say yes 😭💘</p>
-    <img src="yes.png" class="cute-img">
-    <p>You just made my day 💕</p>
+    <h1>Hehe Thank you bubby 💕😗</h1>
+    <p>Here's some flowers 4 u bubby💐💐💐</p>
+    <img src="Flowers.png" class="cute-img">
   `;
 });
+
 
 
