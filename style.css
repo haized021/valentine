@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  background: #ffe6f0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
 /* Envelope Screen */
 .envelope-screen {
   position: fixed;
@@ -7,27 +14,70 @@
   justify-content: center;
   align-items: center;
   z-index: 10;
-  cursor: pointer;
 }
 
 .envelope {
-  width: 260px;
-  height: 160px;
+  width: 220px;
+  height: 140px;
   background: #ff4d88;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
-  line-height: 160px;
+  line-height: 140px;
   border-radius: 14px;
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  cursor: pointer;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-.envelope.open {
-  transform: rotateX(90deg) scale(1.2);
-  opacity: 0;
+.envelope:hover {
+  transform: scale(1.05);
 }
 
-/* Hide helper */
-.hidden {
-  display: none;
+/* Main Card */
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 380px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cute-img {
+  width: 100%;
+  max-width: 250px;
+  margin: 15px 0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#yesBtn {
+  background-color: #ff4d88;
+  color: white;
+}
+
+#noBtn {
+  background-color: #999;
+  color: white;
 }
