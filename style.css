@@ -1,39 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #ffe6f0;
   font-family: Arial, sans-serif;
   min-height: 100vh;
-}
-
-/* Envelope Screen */
-.envelope-screen {
-  position: fixed;
-  inset: 0;
-  background: #ffe6f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
 }
 
-.envelope {
-  width: 220px;
-  height: 140px;
-  background: #ff4d88;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  line-height: 140px;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-.envelope:hover {
-  transform: scale(1.05);
-}
-
-/* Main Card */
+/* Card */
 .card {
   background: white;
   padding: 24px;
@@ -42,42 +21,55 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   width: 90%;
   max-width: 380px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
+/* Title */
+.card h1 {
+  font-size: 1.6rem;
+}
+
+/* Image */
 .cute-img {
   width: 100%;
-  max-width: 250px;
-  margin: 15px 0;
+  max-width: 260px;
+  margin: 20px auto;
+  display: block;
 }
 
 /* Buttons */
 .buttons {
   display: flex;
-  justify-content: center;
   gap: 16px;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 button {
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 8px;
+  flex: 1;
+  padding: 14px 0;
+  font-size: 1.1rem;
   border: none;
+  border-radius: 14px;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 #yesBtn {
-  background-color: #ff4d88;
+  background: #ff4d88;
   color: white;
 }
 
 #noBtn {
-  background-color: #999;
-  color: white;
+  background: #ddd;
 }
+
+/* Extra mobile boost */
+@media (max-width: 480px) {
+  .card h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 1.05rem;
+  }
+}
+
