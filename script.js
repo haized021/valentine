@@ -24,11 +24,12 @@ noBtn.addEventListener("touchstart", growYesButton);
 // YES button
 yesBtn.addEventListener("click", () => {
   card.innerHTML = `
-    <h1>Hehe Thank you bubby 💕😗</h1>
-    <p>Here's some flowers 4 u bubby💐💐💐</p>
+    <h1>Hehe Thank you babi 💕😗</h1>
+    <p>Here's some flowers 4 u babi💐💐💐</p>
     <img src="Flowers.png" class="cute-img">
   `;
 });
+
 
 
 
