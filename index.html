@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Valentine Invite 💌</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>ANG TANONG</title>
+
+    <!-- MOBILE FIX -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Envelope Screen -->
-  <div class="envelope-screen" id="envelopeScreen">
-    <div class="envelope" onclick="openEnvelope()">
-      💌 Tap to Open
+    <div class="card" id="card">
+        <h1>Hi babi 💕 Will you be my Valentine? 💘💖</h1>
+
+        <img src="Heart.png" class="cute-img" alt="Heart">
+
+        <div class="buttons">
+            <button id="yesBtn">YES (hehe)</button>
+            <button id="noBtn">NO (subukan mo)</button>
+        </div>
     </div>
-  </div>
 
-  <!-- Main Card -->
-  <div class="card" id="mainCard" style="display: none;">
-    <h2>Will you be my Valentine? ❤️</h2>
+    <script src="script.js"></script>
 
-    <img src="valentine.png" class="cute-img" alt="Valentine">
-
-    <div class="buttons">
-      <button id="yesBtn" onclick="sayYes()">YES 💖</button>
-      <button id="noBtn" onclick="growYesButton()">NO 😢</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
