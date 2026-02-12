@@ -1,41 +1,36 @@
-const yesBtn = document.getElementById("yesBtn");
-const noBtn = document.getElementById("noBtn");
-const card = document.getElementById("card");
-
 let yesScale = 1;
 
-// Envelope open
 function openEnvelope() {
   const envelope = document.querySelector(".envelope");
-  envelope.classList.add("open");
+  envelope.style.transform = "scale(0)";
+  envelope.style.opacity = "0";
 
   setTimeout(() => {
     document.getElementById("envelopeScreen").style.display = "none";
-    card.classList.remove("hidden");
-  }, 800);
+    document.getElementById("mainCard").style.display = "block";
+  }, 500);
 }
 
-// NO hover / tap
 function growYesButton() {
-  yesScale += 0.15;
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+
+  yesScale += 0.12;
   yesBtn.style.transform = `scale(${yesScale})`;
 
-  const x = Math.random() * 120 - 60;
-  const y = Math.random() * 120 - 60;
+  const maxX = 60;
+  const maxY = 40;
+
+  const x = Math.random() * maxX * 2 - maxX;
+  const y = Math.random() * maxY * 2 - maxY;
+
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 }
 
-// Desktop
-noBtn.addEventListener("mouseover", growYesButton);
-
-// Mobile
-noBtn.addEventListener("touchstart", growYesButton);
-
-// YES click
-yesBtn.addEventListener("click", () => {
-  card.innerHTML = `
-    <h1>Hehe Thank you babi 💖😘</h1>
-    <p>Here's some flowers 4 u babi 🌸💐🌷</p>
-    <img src="flowers.png" class="cute-img">
+function sayYes() {
+  document.querySelector(".card").innerHTML = `
+    <h2>YAYYY 💕</h2>
+    <img src="YES.png" class="cute-img" alt="Happy">
+    <p>See you on Valentine's Day! 💘</p>
   `;
-});
+}
